@@ -32,7 +32,7 @@ function open(success, error, params) {
 
 UWPOAuth = {
     open: function (success, error, params) {
-        open(success, error, params);
+        open(success, error, params[0]);
     }
 };
 
