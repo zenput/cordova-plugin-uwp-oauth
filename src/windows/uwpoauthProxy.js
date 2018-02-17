@@ -9,8 +9,6 @@
  *  @returns: calls success with {error: error_val, redirectUrl: {string} };
  */
 function open(success, error, params) {
-    // cordova passes this in as an array
-    params = params[0];
     var options = Windows.Security.Authentication.Web.WebAuthenticationOptions.none;
     if (!params.redirectUri) {
         throw "You must pass in a redirectUri in the parameters";
