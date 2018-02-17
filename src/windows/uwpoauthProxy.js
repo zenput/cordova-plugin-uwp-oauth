@@ -6,9 +6,11 @@
  * @param params - {}
  *  - requestUri: Open this Uri in a webview for authentication
  *  - redirectUri: what is the return redirectUri
+ *  @returns: calls success with {error: error_val, redirectUrl: {string} };
  */
 function open(success, error, params) {
-
+    // cordova passes this in as an array
+    params = params[0];
     var options = Windows.Security.Authentication.Web.WebAuthenticationOptions.none;
     if (!params.redirectUri) {
         throw "You must pass in a redirectUri in the parameters";
@@ -21,12 +23,12 @@ function open(success, error, params) {
 
     Windows.Security.Authentication.Web.WebAuthenticationBroker.authenticateAsync(options, requestUri, callbackUri).done(function (result) {
         if (result.responseData == "") {
-            success("An error has occurred.", null);
+            success({error: "An error has occurred.", redirectUrl: null});
         } else {
-            success(null, result.responseData);
+            success({error: null, redirectUrl: result.responseData});
         }
     }, function (err) {
-        success(err, null);
+        success({error: err, redirectUrl: null});
     });
 }
 
