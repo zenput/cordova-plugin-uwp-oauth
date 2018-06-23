@@ -1,5 +1,5 @@
 {
-  "name": "uwp-oauth",
+  "name": "cordova-plugin-uwp-oauth",
   "version": "1.0.0",
   "description": "This plugin uses the WebAuthenticationBroker class to connect to OAuth providers.",
   "cordova": {
