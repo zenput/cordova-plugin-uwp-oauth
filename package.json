@@ -18,6 +18,10 @@
     "auth",
     "authentication"
   ],
+  "scripts": {
+    "version": "node scripts/update-version-num.js $npm_package_version && git add --all .",
+    "postversion": "git push && git push --tags"
+  },
   "author": "Zenput <hello@zenput.com>",
   "license": "MIT",
   "bugs": {
