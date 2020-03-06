@@ -1,27 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
-  xmlns:android="http://schemas.android.com/apk/res/android"
-  id="cordova-plugin-uwp-oauth"
-  version="1.0.0">
-	<name>cordova-plugin-uwp-oauth</name>
-	 
-	<description>
+<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android" id="cordova-plugin-uwp-oauth" version="1.0.1">
+    <name>cordova-plugin-uwp-oauth</name>
+    <description>
 		This plugin uses the WebAuthenticationBroker class to connect to OAuth providers.
 	</description>
-	
-	<license>MIT</license>
-
-	<engines>
-		<engine name="cordova" version=">=3.0.0" />
-	</engines>  
-
-	<js-module src="www/uwpoauth.js" name="UWPOAuth">
-		<clobbers target="plugins." />
-	</js-module>
-
+    <license>MIT</license>
+    <engines>
+        <engine name="cordova" version=">=3.0.0"/>
+    </engines>
+    <js-module src="www/uwpoauth.js" name="UWPOAuth">
+        <clobbers target="plugins."/>
+    </js-module>
     <platform name="windows">
         <js-module src="src/windows/uwpoauthProxy.js" name="UWPOAuthProxy">
-            <merges target="" />
+            <merges target=""/>
         </js-module>
     </platform>
 </plugin>
