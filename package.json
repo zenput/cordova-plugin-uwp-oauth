@@ -3,7 +3,7 @@
   "version": "1.0.1",
   "description": "This plugin uses the WebAuthenticationBroker class to connect to OAuth providers.",
   "cordova": {
-    "id": "uwp-oauth",
+    "id": "@zenput/cordova-plugin-uwp-oauth",
     "platforms": [
       "windows"
     ]
