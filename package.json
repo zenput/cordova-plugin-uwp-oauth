@@ -1,9 +1,9 @@
 {
   "name": "@zenput/cordova-plugin-uwp-oauth",
-  "version": "1.0.1",
+  "version": "22.3.5-H13M27S41",
   "description": "This plugin uses the WebAuthenticationBroker class to connect to OAuth providers.",
   "cordova": {
-    "id": "uwp-oauth",
+    "id": "@zenput/cordova-plugin-uwp-oauth",
     "platforms": [
       "windows"
     ]
@@ -19,6 +19,7 @@
     "authentication"
   ],
   "scripts": {
+    "calversion": "TIMESTAMP=$(date '+%y.%-m.%-d-H%HM%MS%S') && echo $TIMESTAMP && npm version $TIMESTAMP",
     "version": "node scripts/update-version-num.js $npm_package_version && git add --all .",
     "postversion": "git push && git push --tags"
   },
